@@ -110,7 +110,7 @@ class BERTTokenizer(AbstractEncoder):
         #   BertTokenizerFast.from_pretrained("bert-base-uncased")
         try:
             self.tokenizer = BertTokenizerFast.from_pretrained(
-                'bert-base-uncased', local_files_only=True
+                'bert-base-uncased', local_files_only=False
             )
         except OSError:
             raise SystemExit(
@@ -243,10 +243,10 @@ class FrozenCLIPEmbedder(AbstractEncoder):
     ):
         super().__init__()
         self.tokenizer = CLIPTokenizer.from_pretrained(
-            version, local_files_only=True
+            version, local_files_only=False
         )
         self.transformer = CLIPTextModel.from_pretrained(
-            version, local_files_only=True
+            version, local_files_only=False
         )
         self.device = device
         self.max_length = max_length

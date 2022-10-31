@@ -8,11 +8,11 @@
 
 
 ## Setup
-Clone the repo, then install the dependencies in ``requirements.txt``, then in ``run.bat`` include your HuggingFace token and the Discord token for your bot, then simply execute the script.
+Clone the repo, then install the dependencies in ``requirements.txt`` - also make sure you have the [CUDA Tookit](https://developer.nvidia.com/cuda-downloads) for your system installed - then in ``run.bat`` include your HuggingFace token and the Discord token for your bot, then simply execute the script.
 
 Or, if you want to skip the batch script, you can simply run this in a terminal.
 
-``$ python . --token=DISCORD_TOKEN --hf_token=HF_TOKEN``
+``$ python . --model_path=PATH_TO_MODEL --token=DISCORD_TOKEN --hf_token=HF_TOKEN``
 
 ### Quickstart
 #### Text to Image
@@ -26,7 +26,7 @@ To generate an image from text, use the ``/dream`` command and include your prom
 
 #### Image to Image
 
-To generate an image from another image, use the ``/translate`` command and include a prompt and an image URL.
+To generate an image from another image, use the ``/dream`` command and include the `init_image` and `strength` parameters. The image needs to be attached to the message.
 
 ![image](https://user-images.githubusercontent.com/26317155/186722463-ec3a6d24-36c1-48f8-b09a-57651706848c.png)
 
@@ -35,7 +35,7 @@ To generate an image from another image, use the ``/translate`` command and incl
 
 #### (Experimental) Inpainting
 
-To fill in a mask in an image, supply a prompt, an image url, and a url to a mask of black pixels in a transparent image
+To fill in a mask in an image, supply a prompt, the `init_image`, `mask_image` and `strength` parameters. The mask needs to consist of black pixels in a transparent image.
 
 ![image](https://user-images.githubusercontent.com/26317155/186722970-71a662dc-16a8-4bb4-8696-3bafb3e08e65.png)
 
