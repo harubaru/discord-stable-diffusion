@@ -1,1 +1,1 @@
-venv/Scripts/python . --model_path "" --token="" --hf_token=""
+venv/bin/python . --model_path "" --token="" --hf_token=""
