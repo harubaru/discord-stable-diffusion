@@ -8,11 +8,34 @@
 
 
 ## Setup
-Clone the repo, then install the dependencies in ``requirements.txt`` - also make sure you have the [CUDA Tookit](https://developer.nvidia.com/cuda-downloads) for your system installed - then in ``run.bat`` include your HuggingFace token and the Discord token for your bot, then simply execute the script.
+Make sure you have the [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads) installed
 
-Or, if you want to skip the batch script, you can simply run this in a terminal.
+Clone the repository and enter it
+````
+git clone https://github.com/harubaru/discord-stable-diffusion.git
+cd discord-stable-diffusion
+````
 
-``$ python . --model_path=PATH_TO_MODEL --token=DISCORD_TOKEN --hf_token=HF_TOKEN``
+#### WINDOWS SETUP
+Run `setup.bat`. If you run into any errors, try running the file as administrator
+
+If you are on a Windows 10 system, run `win10patch.bat`
+
+Modify the `run.bat` file, where
+* `--model_path` is the path to the model (make sure to replace any backslashes with double backslashes),
+* `--token=` is the token to the Discord bot
+* `--hf_token=` is your huggingface token (can be found [here](https://huggingface.co/settings/tokens))
+
+Run the `run.bat` file
+#### LINUX SETUP
+Run `./setup.sh`. If you run into any errors, try using `sudo ./setup.sh`
+
+Modify the `run.sh` file, where
+* `--model_path` is the path to the model,
+* `--token=` is the token to the Discord bot
+* `--hf_token=` is your huggingface token (can be found [here](https://huggingface.co/settings/tokens))
+
+Run `./run.sh`
 
 ### Quickstart
 #### Text to Image
