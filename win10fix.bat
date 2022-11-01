@@ -1,0 +1,1 @@
+python src\scripts\win10patch.py
