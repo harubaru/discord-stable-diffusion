@@ -6,6 +6,15 @@
 
 [![Discord Server](https://discordapp.com/api/guilds/930499730843250783/widget.png?style=banner2)](https://discord.gg/Sx6Spmsgx7)
 
+## Requirements
+Unlike some other projects built around Stable Diffusion this Discord bot is setup only for NVIDIA GPUs and not optimized for low VRAM hardware.
+Consult this table before attempting to run the bot:
+| VRAM  | Comment |
+| ------------- | ------------- |
+| 10GB+  | Recommended - bot will run fine |
+| 8GB-10GB  | Bot will most likely run |
+| 6GB-8GB  | Bot might run - issues expected |
+| <6GB  | Bot will probably not run, don't ask for support  |
 
 ## Setup
 Make sure you have the [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads) installed
