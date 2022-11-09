@@ -112,7 +112,7 @@ class Generate:
             sampler_name          = 'k_lms',
             ddim_eta              = 0.0,  # deterministic
             precision             = 'autocast',
-            full_precision        = False,
+            full_precision        = True,
             strength              = 0.75,  # default in scripts/img2img.py
             seamless              = False,
             embedding_path        = None,

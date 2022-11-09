@@ -132,3 +132,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 waifu-diffusion/
+
+# Modified personal files
+sd_run.bat
+wd_run.bat
+Dockerfile
